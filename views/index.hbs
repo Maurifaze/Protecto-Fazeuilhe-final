@@ -1,0 +1,99 @@
+<img src="images/imagen principal.jpg" alt="instrumentos" class="imagenprincipal">
+
+<br>
+
+<h2>Nuestras ofertas del mes</h2>
+
+<br>
+
+<div class="ofertasdelmes">
+  {{#each novedades}}
+  <div>
+    <img src="{{foto}}" alt="foto" class="item-image">
+    <h3 class="item-title">{{tipo}} {{marca}} {{descripcion}}</h3>
+    <h3 class="item-price"> {{precio}}</h3>
+    <button class="btn-comprar"
+      onclick="alertar('Gracias por su compra, en breve nos contactaremos para coordinar la entrega');">
+      Comprar
+    </button>
+    <script type="text/javascript">
+      function alertar(texto) {
+        alert(texto);
+      }
+    </script>
+    <!--<a href="/carrito" class="addToCart">Agregar al carrito<i class="fas fa-angle-double-right"></i></a> -->
+  </div>
+  {{/each}}
+  <!--
+      <div>
+        <img src="images/ofertabajo.jpg" alt="Bajos" class="item-image">
+        <h3 class="item-title">Bajo Fender jazz bass</h3>
+        <h3 class="item-price">$87000</h3>
+        <a href="/carrito">Agregar al carrito<i class="fas fa-angle-double-right"></i></a>
+      </div>
+
+      <div>
+        <img src="images/ofertabateria.jpg" alt="Baterias" class="item-image">
+        <h3 class="item-title">Baterias Pearl professional</h3>
+        <h3 class="item-price">$87000</h3>
+        <a href="/carrito">Agregar al carrito<i class="fas fa-angle-double-right"></i></a>
+      </div>
+
+      <div>
+        <img src="images/ofertasaxo.jpg" alt="Saxos" class="item-image">
+        <h3 class="item-title">Saxo Parker (nacional)</h3>
+        <h3 class="item-price">$72000</h3>
+        <a href="/carrito">Agregar al carrito<i class="fas fa-angle-double-right"></i></a>
+      </div>
+-->
+</div>
+
+<br>
+<hr>
+
+<div class="contacto">
+
+  <h2>Contactanos</h2>
+
+  <form action="/" method="post">
+
+    <p>
+      <label for="nom">Nombre</label>
+      <input type="text" name="nombre" placeholder="Nombre" />
+    </p>
+    <p>
+      <label for="nom">Apellido</label>
+      <input type="text" name="apellido" placeholder="Apellido" />
+    </p>
+
+    <p>
+      <label for="e-mail">e-mail</label>
+      <input type="text" name="email" placeholder="e-mail" />
+    </p>
+
+    <p>
+      <label for="Telefono">Telefono</label>
+      <input type="number" name="telefono" placeholder="Telefono" />
+    </p>
+
+    <p>
+      <label for="motcontacto">Motivo del contacto</label>
+      <textarea name="motcontacto"></textarea>
+    </p>
+
+    <p>
+      <button type="submit" class="btn btn-primary">Enviar</button>
+    </p>
+
+    <p>{{message}}</p>
+
+  </form>
+
+
+</div>
+
+
+</div>
+
+
+</body>
